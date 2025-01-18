@@ -1,0 +1,238 @@
+Automation Framework
+--------------------
+we organize automation project files/folders in structured manner.
+
+
+Objective
+----------
+1)Re-usubility
+2)Maintainability
+3)Readability
+
+Types of frameworks
+-------------------
+1)Built-in
+Ex:testing,junit,cucumber,robot, etc..
+
+2) Customized(user defined)
+Modular framework,data driven, keyword driven,hybrid driven etc..
+
+
+Phases/stages
+-------------
+
+1)Analysing AUT
+-Number of pages
+-what are all elements/type/how
+-what to automate/what we cannot automate 
+
+
+2)chose test cases for automation
+100 Test cases -----90 automation 10 can not automate
+100% automation -based on context 
+
+1) sanity test cases -p1
+2)data driven test cases/re-tests -p2
+3)Regression test cases -p3
+4)Any other cases -p4
+
+
+3)Design & Developement of framework
+
+4)Execution -local. remotely 
+
+5)Maintenace 
+
+
+E-Commerce domain
+------------------
+1)Frontend operations(Customers/users)
+
+-register an account
+-login
+-search for the product
+-add/edit/delete product from cart
+-order product
+-reviews
+etc..
+
+
+2)Backend operations(admins/backend team)
+-products
+-customers
+-order
+-store
+etc
+
+
+
+Session50
+------------------
+
+2) Adding logs to test case(log4j2)
+Logging - record all the avents in the form of text
+Log level -All<Trace <Debug < Info <Warn < Fatal <off
+
+Appenders -when to generate logs(Console/File)
+Loggers -what type of logs generate (All < Trace <Debug <Info <Warn <Error < Fatal <Off)
+
+
+Session 53
+---------
+Selenium Grid
+
+------------------
+
+Client:
+Selenium Hub:
+Node:remote machine in which all browser are available 
+
+Standalone Setup (Single machine):
+1. Download selenium-server-4.15.0.jar and place it somewhere.
+2. Run below command to start Selenium Grid
+java -jar selenium-server-4.15.0.jar standalone
+3. URL to see sessions: http://localhost:4444/
+ http://192.168.1.9:4444
+
+
+Hub & Node Setup (Multiple machines):
+1. Download selenium-server-4.15.0.jar and place it somewhere in both (hub & node) the machines.
+2. Run below command to make machine as hub java-jar -jar jar hub
+3. Run below command to make machine as node
+java -jar selenium-server-4.15.0.jar node --hub http://<hub-ip>:4444
+4. URL to see sessions: http:// localhost:4444/
+
+
+Add SeleniumGrid  code to baseclass 
+
+
+
+Session 54
+-------------
+Docker Integration
+----------------------
+
+Docker - containerazation
+Doucker Hub -multiple images 
+Image- 
+Container - from inage we can create container 
+Aceess Container to execute Automation 
+https://hub.docker.com/
+
+Some comman comands
+docker version 
+docker -compose version
+docker info
+docker --help
+iamge
+-------
+docker images 
+docker pull ubunt(any image name
+docker rmi <image id>
+
+container commands
+-----------------
+docker ps
+
+to run 
+docker run <image name>
+docker start <image name>
+docker stop <image name>
+docker rm <Containerid/ name>
+
+system commands
+---------------
+docker stats 
+docker system df
+docker prune -f
+***Selenium Grid Setup with Docker Container 
+1)pull docker 3 images and Verify 
+----------
+1) hub  docker pull selenium/hub
+2)linux-firefoxdocker pull selenium/node-firefox
+3)linux-chrome docker pull selenium/node-chrome
+4)docker images 
+
+
+2)Running Docker Container by using below commands 
+1)docker network create grid
+create hub
+2)docker run -d -p 4442-4444:4442-4444 --net grid --name selenium-hub selenium/hub
+create chrome node
+3)docker run -d --net grid -e SE_EVENT_BUS_HOST=selenium-hub -e SE_EVENT_BUS_PUBLISH_PORT=4442 -e SE_EVENT_BUS_SUBSCRIBE_PORT=4443 selenium/node-chrome
+ create firefox node 
+4)docker run -d --net grid -e SE_EVENT_BUS_HOST=selenium-hub -e SE_EVENT_BUS_PUBLISH_PORT=4442 -e SE_EVENT_BUS_SUBSCRIBE_PORT=4443 selenium/node--firefox
+
+to check node are running and uo
+http://192.168.1.9:4444/ui/
+
+
+create xml file for grid suite 
+
+opne docker -compose .yaml file for starting hub and node
+
+1)create docker-compose.ymal file
+
+2)Run docker-compose.yaml
+docker-compose up
+
+3)To Check hub & nodes running state:
+http://localhost:4444/grid/console
+4)To increse number of nodes :
+docker-compose scale chrome=3
+
+5) To stop grid and cleanup the created container ,run
+ docker-compose down
+ 
+ 
+Session 55
+----------
+pom.xml
+----------
+dependancies --- download required depandency jar for project
+plugins --- to compile and run the project 
+
+1)maven compiler plugin
+2)maven surefire plugin
+
+
+install maven in loacl
+-----------------------
+https://maven.apache.org/download.cgi
+C:\Program File\apache-maven-<version>\bin
+**Configure the maven path in environment variable 
+
+open cmd 
+>mavn -version 
+>cd >project loaction 
+>mvn test
+
+
+
+CI Process
+-----------
+1)install git s/w
+2)Create gihub empoty repository (if not created yet)
+Repo URL:https://github.com/manosdet/RestAssuredAPI-PetStore.git
+Working Project location:C:\Users\premk\eclipse-workspace\PetStoreAutomationRestAssured
+
+1) create a new local repository (one time)
+git init
+
+2)provide user info to git repo.(One time)
+git config --global user.name "username"
+git config --global user.email "email@gmail.com" 
+
+3)git status 
+
+4)git add -
+git add filename.ext
+  git add*.ext
+  git add foldername
+
+5)commit -m "Commit massage"
+
+6) push code to remote repository 
+$- git remote add origin "https://github.com/manosdet/RestAssuredAPI-PetStore.git"    --->local repository connected with remote repository (need to do it for first time)
+7Final push to remote repo
+$- git push -u origin master

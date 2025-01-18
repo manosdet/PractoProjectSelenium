@@ -1,0 +1,43 @@
+11:54:51.991[main] INFO testCases.TC001_AccountRegistrationTest - ** Starting TC001_AccountRegistrationTest**
+11:55:11.493[main] ERRORtestCases.TC001_AccountRegistrationTest - Test Failed
+13:18:11.456[main] INFO testCases.TC001_AccountRegistrationTest - ** Starting TC001_AccountRegistrationTest**
+13:18:31.080[main] ERRORtestCases.TC001_AccountRegistrationTest - Test Failed
+13:29:18.611[main] INFO testCases.TC001_AccountRegistrationTest - ** Starting TC001_AccountRegistrationTest**
+13:29:44.132[main] ERRORtestCases.TC001_AccountRegistrationTest - Test Failed
+13:29:46.061[main] INFO testCases.TC001_AccountRegistrationTest - ** Starting TC001_AccountRegistrationTest**
+13:30:04.514[main] ERRORtestCases.TC001_AccountRegistrationTest - Test Failed
+13:30:29.999[main] INFO testCases.TC001_AccountRegistrationTest - ** Starting TC001_AccountRegistrationTest**
+13:30:43.612[main] ERRORtestCases.TC001_AccountRegistrationTest - Test Failed
+13:31:37.186[TestNG-tests-1] INFO testCases.TC001_AccountRegistrationTest - ** Starting TC001_AccountRegistrationTest**
+13:31:37.215[TestNG-tests-2] INFO testCases.TC001_AccountRegistrationTest - ** Starting TC001_AccountRegistrationTest**
+13:31:38.552[TestNG-tests-3] INFO testCases.TC001_AccountRegistrationTest - ** Starting TC001_AccountRegistrationTest**
+13:31:49.285[TestNG-tests-3] ERRORtestCases.TC001_AccountRegistrationTest - Test Failed
+13:31:55.556[TestNG-tests-2] ERRORtestCases.TC001_AccountRegistrationTest - Test Failed
+13:32:02.731[TestNG-tests-1] ERRORtestCases.TC001_AccountRegistrationTest - Test Failed
+19:36:24.768[main] INFO testCases.TC003_LoginTestDDT - *****Starting TC_LoginDDT****
+19:36:45.103[main] INFO testCases.TC003_LoginTestDDT - *****Starting TC_LoginDDT****
+19:36:45.696[main] INFO testCases.TC003_LoginTestDDT - *****Starting TC_LoginDDT****
+19:36:45.875[main] INFO testCases.TC003_LoginTestDDT - *****Starting TC_LoginDDT****
+19:36:46.043[main] INFO testCases.TC003_LoginTestDDT - *****Starting TC_LoginDDT****
+19:37:56.656[main] INFO testCases.TC003_LoginTestDDT - *****Starting TC_LoginDDT****
+19:38:06.934[main] INFO testCases.TC003_LoginTestDDT - *****Starting TC_LoginDDT****
+19:38:07.189[main] INFO testCases.TC003_LoginTestDDT - *****Starting TC_LoginDDT****
+19:38:17.264[main] INFO testCases.TC003_LoginTestDDT - *****Starting TC_LoginDDT****
+19:38:17.441[main] INFO testCases.TC003_LoginTestDDT - *****Starting TC_LoginDDT****
+22:57:15.449[main] INFO testCases.TC001_AccountRegistrationTest - ** Starting TC001_AccountRegistrationTest**
+22:57:35.574[main] ERRORtestCases.TC001_AccountRegistrationTest - Test Failed
+22:58:15.416[main] INFO testCases.TC002_LoginTest - ****** Starting TC002****
+00:45:26.504[main] INFO testCases.TC001_AccountRegistrationTest - ** Starting TC001_AccountRegistrationTest**
+00:45:44.763[main] ERRORtestCases.TC001_AccountRegistrationTest - Test Failed
+00:46:25.300[main] INFO testCases.TC002_LoginTest - ****** Starting TC002****
+10:26:44.181[main] INFO testCases.TC001_AccountRegistrationTest - ** Starting TC001_AccountRegistrationTest**
+10:27:04.514[main] ERRORtestCases.TC001_AccountRegistrationTest - Test Failed
+10:27:44.965[main] INFO testCases.TC002_LoginTest - ****** Starting TC002****
+12:33:26.246[main] INFO testCases.TC001_AccountRegistrationTest - ** Starting TC001_AccountRegistrationTest**
+12:33:44.509[main] ERRORtestCases.TC001_AccountRegistrationTest - Test Failed
+12:34:24.981[main] INFO testCases.TC002_LoginTest - ****** Starting TC002****
+15:53:44.683[main] INFO testCases.TC001_AccountRegistrationTest - ** Starting TC001_AccountRegistrationTest**
+15:53:59.328[main] ERRORtestCases.TC001_AccountRegistrationTest - Test Failed
+15:56:18.036[main] INFO testCases.TC001_AccountRegistrationTest - ** Starting TC001_AccountRegistrationTest**
+15:56:36.369[main] ERRORtestCases.TC001_AccountRegistrationTest - Test Failed
+15:57:16.137[main] INFO testCases.TC002_LoginTest - ****** Starting TC002****
