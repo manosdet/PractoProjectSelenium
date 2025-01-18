@@ -211,6 +211,8 @@ open cmd
 
 CI Process
 -----------
+Pre-requ
+--------
 1)install git s/w
 2)Create gihub empoty repository (if not created yet)
 Repo URL:https://github.com/manosdet/PractoProjectSelenium.git
@@ -232,10 +234,22 @@ git add filename.ext
   git add*.ext
   git add foldername
 
-5)Commit the code into Local(git 
+5)Commit the code into Local(git ) repo
 git commit -m "Commit massage"
 
 6) push code to remote repository 
 $- git remote add origin "https://github.com/manosdet/RestAssuredAPI-PetStore.git"    --->local repository connected with remote repository (need to do it for first time)
 7Final push to remote repo
 $- git push -u origin master
+
+Round 2)
+Chech status
+
+Adding files/folders to staging/indexing 
+git add -a  -->add all the files and folders to staging
+git add filename.ext
+
+Commit the code into Local(git ) Repo 
+git commit -m "Commit massage"
+
+git push origin master 
