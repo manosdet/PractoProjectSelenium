@@ -253,3 +253,21 @@ Commit the code into Local(git ) Repo
 git commit -m "Commit massage"
 
 git push origin master 
+
+***Pull Files From Remote ****
+git pull <remote repo URL>
+
+*** Clone new repo to local from remote Repo***
+git clone<remote repo URL>
+
+
+
+
+
+Session 56:
+Jenkins:
+
+ C:\Users\premk\.jenkins\secrets\initialAdminPassword
+bf0a74b78ac04788b3b99cbf6e059fa9
+
+http://localhost:8080/login?from=%2F
