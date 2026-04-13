@@ -229,7 +229,7 @@ git config --global user.email "email@gmail.com"
 git status 
 
 4)Adding files/folders to staging/indexing 
-git add -a  -->add all the files and folders to staging
+git add -A  -->add all the files and folders to staging
 git add filename.ext
   git add*.ext
   git add foldername

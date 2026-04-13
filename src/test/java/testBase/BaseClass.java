@@ -18,6 +18,7 @@ import org.openqa.selenium.Platform;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -85,7 +86,10 @@ public class BaseClass {
 
 		}
 
-
+         ChromeOptions options = new ChromeOptions();
+         options.addArguments("--headless");
+         options.addArguments("--no-sandbox");
+         options.addArguments("--disable-dev-shm-usage");
 		//driver.manage().deleteAllCookies();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.get(p.getProperty("appURL2"));//reading url from propertis file
