@@ -86,10 +86,21 @@ public class BaseClass {
 
 		}
 
-         ChromeOptions options = new ChromeOptions();
-         options.addArguments("--headless");
-         options.addArguments("--no-sandbox");
-         options.addArguments("--disable-dev-shm-usage");
+		ChromeOptions options = new ChromeOptions();
+
+		// Modern + CI-friendly headless settings
+		options.addArguments("--headless=new");           // ← Best for Selenium 4.8+
+		options.addArguments("--no-sandbox");
+		options.addArguments("--disable-dev-shm-usage");
+		options.addArguments("--disable-gpu");
+		options.addArguments("--window-size=1920,1080");
+		options.addArguments("--remote-allow-origins=*");
+
+		// Optional but helpful
+		options.addArguments("--disable-extensions");
+		options.addArguments("--disable-setuid-sandbox");
+
+		driver = new ChromeDriver(options);
 		//driver.manage().deleteAllCookies();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.get(p.getProperty("appURL2"));//reading url from propertis file
