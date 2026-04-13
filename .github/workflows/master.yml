@@ -11,25 +11,25 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-name: Checkout Code
-      uses: actions/checkout@v5
+      - name: Checkout Code
+        uses: actions/checkout@v5
 
-name: Set up JDK 21
-      uses: actions/setup-java@v5
-      with:
-        java-version: '21'
-        distribution: 'temurin'
-		cache: 'maven'
+      - name: Set up JDK 21
+        uses: actions/setup-java@v5
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+          cache: 'maven'
 
-name: Set up Maven
-      run: mvn -version
+      - name: Set up Maven
+        run: mvn -version
 
-name: Run TestNG Suite
-      run: mvn clean test -DsuiteXmlFile=master.xml
+      - name: Run TestNG Suite
+        run: mvn clean test -DsuiteXmlFile=master.xml   # Change if your suite file name/path is different
 
-name: Upload TestNG Reports
-      if: always()
-      uses: actions/upload-artifact@v4
-      with:
-        name: TestNG-Reports
-        path: target/surefire-reports
+      - name: Upload TestNG Reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: TestNG-Reports
+          path: target/surefire-reports

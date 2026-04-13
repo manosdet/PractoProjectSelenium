@@ -252,7 +252,7 @@ git add filename.ext
 Commit the code into Local(git ) Repo 
 git commit -m "Commit massage"
 
-git push origin master 
+git push origin main 
 
 ***Pull Files From Remote ****
 git pull <remote repo URL>
